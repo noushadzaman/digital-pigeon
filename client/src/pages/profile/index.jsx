@@ -1,8 +1,11 @@
+import { useAppStore } from "@/store/slices/auth-slice"
 
 const Profile = () => {
+    const { userInfo } = useAppStore();
+
     return (
         <div>
-            Profile
+            Email: {userInfo.email}
         </div>
     )
 }
